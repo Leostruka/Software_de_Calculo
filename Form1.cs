@@ -36,11 +36,31 @@ namespace Calculadora
             resultBox.Font = novaFonte;
         }
 
+        // Check if decimal is int number
+        private decimal CheckAndRoundResult(decimal number)
+        {
+            if (IsRoundNumber(number))
+            {
+                return Math.Round(number);
+            }
+            else
+            {
+                return number;
+            }
+        }
+
+        private bool IsRoundNumber(decimal number)
+        {
+            return Math.Round(number, 0) == number;
+        }
+
+        // Start form
         public Form1()
         {
             InitializeComponent();
         }
 
+        // On Click
         private void zero_Click(object sender, EventArgs e)
         {
             operBox.Text += "0";
@@ -105,6 +125,76 @@ namespace Calculadora
             }
         }
 
+        private void mult_Click(object sender, EventArgs e)
+        {
+            if (operBox.Text != "" || result != 0)
+            {
+                if (resultBox.Text == "")
+                {
+                    val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                    resultBox.Text = operBox.Text + "x";
+                    operBox.Text = "";
+                    operation = "mult";
+                }
+                else if (val2 != 0)
+                {
+                    result = CheckAndRoundResult(result);
+                    val1 = result;
+                    val2 = 0; result = 0;
+                    resultBox.Text = Convert.ToString(val1) + "x";
+                    size28();
+                    operBox.Text = "";
+                    operation = "mult";
+                }
+                else
+                {
+                    val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                    result = val1 * val2;
+                    val1 = CheckAndRoundResult(result);
+                    val2 = 0; result = 0;
+                    resultBox.Text = Convert.ToString(val1) + "x";
+                    size28();
+                    operBox.Text = "";
+                    operation = "mult";
+                }
+            }
+        }
+
+        private void div_Click(object sender, EventArgs e)
+        {
+            if (operBox.Text != "" || result != 0)
+            {
+                if (resultBox.Text == "")
+                {
+                    val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                    resultBox.Text = operBox.Text + "÷";
+                    operBox.Text = "";
+                    operation = "div";
+                }
+                else if (val2 != 0)
+                {
+                    result = CheckAndRoundResult(result);
+                    val1 = result;
+                    val2 = 0; result = 0;
+                    resultBox.Text = Convert.ToString(val1) + "÷";
+                    size28();
+                    operBox.Text = "";
+                    operation = "div";
+                }
+                else
+                {
+                    val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                    result = val1 / val2;
+                    val1 = CheckAndRoundResult(result);
+                    val2 = 0; result = 0;
+                    resultBox.Text = Convert.ToString(val1) + "÷";
+                    size28();
+                    operBox.Text = "";
+                    operation = "div";
+                }
+            }
+        }
+
         private void som_Click(object sender, EventArgs e)
         {
             if (operBox.Text != "" || result != 0)
@@ -118,6 +208,7 @@ namespace Calculadora
                 }
                 else if (val2 != 0)
                 {
+                    result = CheckAndRoundResult(result);
                     val1 = result;
                     val2 = 0; result = 0;
                     resultBox.Text = Convert.ToString(val1) + "+";
@@ -129,7 +220,7 @@ namespace Calculadora
                 {
                     val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
                     result = val1 + val2;
-                    val1 = result;
+                    val1 = CheckAndRoundResult(result);
                     val2 = 0; result = 0;
                     resultBox.Text = Convert.ToString(val1) + "+";
                     size28();
@@ -137,19 +228,98 @@ namespace Calculadora
                     operation = "sum";
                 }
             }
-            
+        }
+
+        private void sub_Click(object sender, EventArgs e)
+        {
+            if (operBox.Text != "" || result != 0)
+            {
+                if (resultBox.Text == "")
+                {
+                    val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                    resultBox.Text = operBox.Text + "-";
+                    operBox.Text = "";
+                    operation = "sub";
+                }
+                else if (val2 != 0)
+                {
+                    result = CheckAndRoundResult(result);
+                    val1 = result;
+                    val2 = 0; result = 0;
+                    resultBox.Text = Convert.ToString(val1) + "-";
+                    size28();
+                    operBox.Text = "";
+                    operation = "sub";
+                }
+                else
+                {
+                    val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                    result = val1 - val2;
+                    val1 = CheckAndRoundResult(result);
+                    val2 = 0; result = 0;
+                    resultBox.Text = Convert.ToString(val1) + "-";
+                    size28();
+                    operBox.Text = "";
+                    operation = "sub";
+                }
+            }
         }
 
         private void equal_Click(object sender, EventArgs e)
         {
             if (val1 != 0 && val2 != 0 || val1 != 0 && operBox.Text != "")
             {
-                if (operation == "sum")
+                dotVal1 = false; dotVal2 = false;
+
+                if (operation == "mult")
+                {
+                    if (result == 0)
+                    {
+                        val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                        result = val1 * val2;
+                        result = CheckAndRoundResult(result);
+                        resultBox.Text += operBox.Text + "\r\n=" + Convert.ToString(result);
+                        size18();
+                        operBox.Text = "";
+                    }
+                    else
+                    {
+                        val1 = result;
+                        result = val1 * val2;
+                        result = CheckAndRoundResult(result);
+                        resultBox.Text = Convert.ToString(val1) + "x" + val2 + "\r\n=" + result;
+                        size18();
+                        operBox.Text = "";
+                    }
+                }
+                if (operation == "div")
+                {
+                    if (result == 0)
+                    {
+                        val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                        result = val1 / val2;
+                        result = CheckAndRoundResult(result);
+                        resultBox.Text += operBox.Text + "\r\n=" + Convert.ToString(result);
+                        size18();
+                        operBox.Text = "";
+                    }
+                    else
+                    {
+                        val1 = result;
+                        result = val1 / val2;
+                        result = CheckAndRoundResult(result);
+                        resultBox.Text = Convert.ToString(val1) + "÷" + val2 + "\r\n=" + result;
+                        size18();
+                        operBox.Text = "";
+                    }
+                }
+                else if (operation == "sum")
                 {
                     if (result == 0)
                     {
                         val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
                         result = val1 + val2;
+                        result = CheckAndRoundResult(result);
                         resultBox.Text += operBox.Text + "\r\n=" + Convert.ToString(result);
                         size18();
                         operBox.Text = "";
@@ -158,7 +328,29 @@ namespace Calculadora
                     {
                         val1 = result;
                         result = val1 + val2;
+                        result = CheckAndRoundResult(result);
                         resultBox.Text = Convert.ToString(val1) + "+" + val2 + "\r\n=" + result;
+                        size18();
+                        operBox.Text = "";
+                    }
+                }
+                else if (operation == "sub")
+                {
+                    if (result == 0)
+                    {
+                        val2 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
+                        result = val1 - val2;
+                        result = CheckAndRoundResult(result);
+                        resultBox.Text += operBox.Text + "\r\n=" + Convert.ToString(result);
+                        size18();
+                        operBox.Text = "";
+                    }
+                    else
+                    {
+                        val1 = result;
+                        result = val1 - val2;
+                        result = CheckAndRoundResult(result);
+                        resultBox.Text = Convert.ToString(val1) + "-" + val2 + "\r\n=" + result;
                         size18();
                         operBox.Text = "";
                     }

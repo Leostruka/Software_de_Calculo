@@ -91,6 +91,7 @@
             this.div.TabIndex = 3;
             this.div.Text = "÷";
             this.div.UseVisualStyleBackColor = true;
+            this.div.Click += new System.EventHandler(this.div_Click);
             // 
             // mult
             // 
@@ -101,6 +102,7 @@
             this.mult.TabIndex = 4;
             this.mult.Text = "X";
             this.mult.UseVisualStyleBackColor = true;
+            this.mult.Click += new System.EventHandler(this.mult_Click);
             // 
             // sub
             // 
@@ -111,6 +113,7 @@
             this.sub.TabIndex = 8;
             this.sub.Text = "-";
             this.sub.UseVisualStyleBackColor = true;
+            this.sub.Click += new System.EventHandler(this.sub_Click);
             // 
             // nine
             // 
