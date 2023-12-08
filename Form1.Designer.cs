@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.operBox = new System.Windows.Forms.TextBox();
-            this.CE = new System.Windows.Forms.Button();
-            this.C = new System.Windows.Forms.Button();
+            this.cancelEntry = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
             this.div = new System.Windows.Forms.Button();
             this.mult = new System.Windows.Forms.Button();
             this.sub = new System.Windows.Forms.Button();
@@ -47,40 +47,40 @@
             this.five = new System.Windows.Forms.Button();
             this.six = new System.Windows.Forms.Button();
             this.som = new System.Windows.Forms.Button();
-            this.ResultBox = new System.Windows.Forms.TextBox();
+            this.resultBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // operBox
             // 
             this.operBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.operBox.Enabled = false;
-            this.operBox.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.operBox.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.operBox.Location = new System.Drawing.Point(11, 69);
             this.operBox.Name = "operBox";
-            this.operBox.Size = new System.Drawing.Size(376, 44);
+            this.operBox.Size = new System.Drawing.Size(376, 35);
             this.operBox.TabIndex = 0;
             this.operBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // CE
+            // cancelEntry
             // 
-            this.CE.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CE.Location = new System.Drawing.Point(11, 119);
-            this.CE.Name = "CE";
-            this.CE.Size = new System.Drawing.Size(89, 89);
-            this.CE.TabIndex = 1;
-            this.CE.Text = "CE";
-            this.CE.UseVisualStyleBackColor = true;
+            this.cancelEntry.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelEntry.Location = new System.Drawing.Point(11, 119);
+            this.cancelEntry.Name = "cancelEntry";
+            this.cancelEntry.Size = new System.Drawing.Size(89, 89);
+            this.cancelEntry.TabIndex = 1;
+            this.cancelEntry.Text = "CE";
+            this.cancelEntry.UseVisualStyleBackColor = true;
             // 
-            // C
+            // clear
             // 
-            this.C.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C.Location = new System.Drawing.Point(106, 119);
-            this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(89, 89);
-            this.C.TabIndex = 2;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = true;
+            this.clear.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Location = new System.Drawing.Point(106, 119);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(89, 89);
+            this.clear.TabIndex = 2;
+            this.clear.Text = "C";
+            this.clear.UseVisualStyleBackColor = true;
             // 
             // div
             // 
@@ -154,6 +154,7 @@
             this.equal.TabIndex = 16;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = true;
+            this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
             // three
             // 
@@ -252,26 +253,27 @@
             this.som.TabIndex = 12;
             this.som.Text = "+";
             this.som.UseVisualStyleBackColor = true;
+            this.som.Click += new System.EventHandler(this.som_Click);
             // 
-            // ResultBox
+            // resultBox
             // 
-            this.ResultBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ResultBox.Enabled = false;
-            this.ResultBox.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ResultBox.Location = new System.Drawing.Point(11, 12);
-            this.ResultBox.Multiline = true;
-            this.ResultBox.Name = "ResultBox";
-            this.ResultBox.Size = new System.Drawing.Size(376, 63);
-            this.ResultBox.TabIndex = 20;
-            this.ResultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.resultBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.resultBox.Enabled = false;
+            this.resultBox.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.resultBox.Location = new System.Drawing.Point(11, 12);
+            this.resultBox.Multiline = true;
+            this.resultBox.Name = "resultBox";
+            this.resultBox.Size = new System.Drawing.Size(376, 63);
+            this.resultBox.TabIndex = 2;
+            this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 599);
-            this.Controls.Add(this.ResultBox);
+            this.Controls.Add(this.resultBox);
             this.Controls.Add(this.dot);
             this.Controls.Add(this.zero);
             this.Controls.Add(this.equal);
@@ -288,8 +290,8 @@
             this.Controls.Add(this.seven);
             this.Controls.Add(this.mult);
             this.Controls.Add(this.div);
-            this.Controls.Add(this.C);
-            this.Controls.Add(this.CE);
+            this.Controls.Add(this.clear);
+            this.Controls.Add(this.cancelEntry);
             this.Controls.Add(this.operBox);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -299,10 +301,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox ResultBox;
-        private System.Windows.Forms.Button CE;
-        private System.Windows.Forms.Button C;
+        private System.Windows.Forms.Button cancelEntry;
+        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button div;
         private System.Windows.Forms.Button mult;
         private System.Windows.Forms.Button sub;
@@ -320,6 +320,7 @@
         private System.Windows.Forms.Button six;
         private System.Windows.Forms.Button som;
         private System.Windows.Forms.TextBox operBox;
+        private System.Windows.Forms.TextBox resultBox;
     }
 }
 
