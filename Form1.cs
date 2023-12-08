@@ -16,7 +16,7 @@ namespace Calculadora
     {
         decimal val1 = 0, val2 = 0, result = 0;
         string operation = "";
-        bool dotVal1 = false, dotVal2 = false;
+        bool dotv = false;
 
         // Alternate font size
         private void size18()
@@ -113,15 +113,10 @@ namespace Calculadora
 
         private void dot_Click(object sender, EventArgs e)
         {
-            if (dotVal1 == false && val1 == 0)
+            if (dotv == false && val1 == 0 || dotv == false && val2 == 0)
             {
                 operBox.Text += ".";
-                dotVal1 = true;
-            }
-            else if (dotVal2 == false && val2 == 0)
-            {
-                operBox.Text += ".";
-                dotVal2 = true;
+                dotv = true;
             }
         }
 
@@ -129,13 +124,15 @@ namespace Calculadora
         {
             result = 0; val1 = 0; val2 = 0;
             operBox.Text = ""; resultBox.Text = "";
-            dotVal1 = false; dotVal2 = false;
+            dotv = false;
         }
 
         private void mult_Click(object sender, EventArgs e)
         {
             if (operBox.Text != "" || result != 0)
             {
+                dotv = false;
+
                 if (resultBox.Text == "")
                 {
                     val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
@@ -171,6 +168,8 @@ namespace Calculadora
         {
             if (operBox.Text != "" || result != 0)
             {
+                dotv = false;
+
                 if (resultBox.Text == "")
                 {
                     val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
@@ -206,6 +205,8 @@ namespace Calculadora
         {
             if (operBox.Text != "" || result != 0)
             {
+                dotv = false;
+
                 if (resultBox.Text == "")
                 {
                     val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
@@ -241,6 +242,8 @@ namespace Calculadora
         {
             if (operBox.Text != "" || result != 0)
             {
+                dotv = false;
+
                 if (resultBox.Text == "")
                 {
                     val1 = decimal.Parse(operBox.Text, CultureInfo.InvariantCulture);
@@ -276,7 +279,7 @@ namespace Calculadora
         {
             if (val1 != 0 && val2 != 0 || val1 != 0 && operBox.Text != "")
             {
-                dotVal1 = false; dotVal2 = false;
+                dotv = false;
 
                 if (operation == "mult")
                 {
