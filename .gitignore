@@ -1,1 +1,38 @@
-*.vsidx
+# Arquivos temporários criados pelo Visual Studio
+.vscode/
+.vs/
+bin/
+obj/
+
+# Arquivos de compilação
+*.dll
+*.exe
+*.pdb
+*.dll.config
+
+# Arquivos de saída do Visual Studio
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Ll]og/
+[Ll]ogs/
+
+# Ferramentas NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Arquivos de usuário e configuração
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Arquivos de configuração do Rider
+.idea/
+*.sln.iml
