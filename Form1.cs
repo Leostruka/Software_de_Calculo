@@ -125,6 +125,13 @@ namespace Calculadora
             }
         }
 
+        private void clear_Click(object sender, EventArgs e)
+        {
+            result = 0; val1 = 0; val2 = 0;
+            operBox.Text = ""; resultBox.Text = "";
+            dotVal1 = false; dotVal2 = false;
+        }
+
         private void mult_Click(object sender, EventArgs e)
         {
             if (operBox.Text != "" || result != 0)
