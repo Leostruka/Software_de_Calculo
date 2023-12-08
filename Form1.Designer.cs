@@ -71,6 +71,7 @@
             this.cancelEntry.TabIndex = 1;
             this.cancelEntry.Text = "CE";
             this.cancelEntry.UseVisualStyleBackColor = true;
+            this.cancelEntry.Click += new System.EventHandler(this.cancelEntry_Click);
             // 
             // clear
             // 

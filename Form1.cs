@@ -120,6 +120,12 @@ namespace Calculadora
             }
         }
 
+        private void cancelEntry_Click(object sender, EventArgs e)
+        {
+            operBox.Text = "";
+            dotv = false;
+        }
+
         private void clear_Click(object sender, EventArgs e)
         {
             result = 0; val1 = 0; val2 = 0;
