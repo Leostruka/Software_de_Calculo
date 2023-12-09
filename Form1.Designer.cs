@@ -48,6 +48,7 @@
             this.six = new System.Windows.Forms.Button();
             this.som = new System.Windows.Forms.Button();
             this.resultBox = new System.Windows.Forms.TextBox();
+            this.del = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // operBox
@@ -58,7 +59,7 @@
             this.operBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.operBox.Location = new System.Drawing.Point(11, 69);
             this.operBox.Name = "operBox";
-            this.operBox.Size = new System.Drawing.Size(376, 35);
+            this.operBox.Size = new System.Drawing.Size(334, 35);
             this.operBox.TabIndex = 0;
             this.operBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -273,11 +274,22 @@
             this.resultBox.TabIndex = 2;
             this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // del
+            // 
+            this.del.Location = new System.Drawing.Point(342, 74);
+            this.del.Name = "del";
+            this.del.Size = new System.Drawing.Size(44, 31);
+            this.del.TabIndex = 20;
+            this.del.Text = "⌫";
+            this.del.UseVisualStyleBackColor = true;
+            this.del.Click += new System.EventHandler(this.del_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 599);
+            this.Controls.Add(this.del);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.dot);
             this.Controls.Add(this.zero);
@@ -299,6 +311,7 @@
             this.Controls.Add(this.cancelEntry);
             this.Controls.Add(this.operBox);
             this.Name = "Form1";
+            this.RightToLeftLayout = true;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,6 +339,7 @@
         private System.Windows.Forms.Button som;
         private System.Windows.Forms.TextBox operBox;
         private System.Windows.Forms.TextBox resultBox;
+        private System.Windows.Forms.Button del;
     }
 }
 

@@ -120,6 +120,11 @@ namespace Calculadora
             }
         }
 
+        private void del_Click(object sender, EventArgs e)
+        {
+            operBox.Text = operBox.Text.Substring(0, operBox.Text.Length - 1);
+        }
+
         private void cancelEntry_Click(object sender, EventArgs e)
         {
             operBox.Text = "";
