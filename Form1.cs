@@ -180,6 +180,11 @@ namespace Calculadora
                     operation = "mult";
                 }
             }
+            else if (string.IsNullOrEmpty(operBox.Text) && val1 != 0)
+            {
+                resultBox.Text = Convert.ToString(val1) + "x";
+                operation = "mult";
+            }
         }
 
         private void div_Click(object sender, EventArgs e)
@@ -216,6 +221,11 @@ namespace Calculadora
                     operBox.Text = "";
                     operation = "div";
                 }
+            }
+            else if (string.IsNullOrEmpty(operBox.Text) && val1 != 0)
+            {
+                resultBox.Text = Convert.ToString(val1) + "÷";
+                operation = "div";
             }
         }
 
@@ -254,6 +264,11 @@ namespace Calculadora
                     operation = "sum";
                 }
             }
+            else if (string.IsNullOrEmpty(operBox.Text) && val1 != 0)
+            {
+                resultBox.Text = Convert.ToString(val1) + "+";
+                operation = "sum";
+            }
         }
 
         private void sub_Click(object sender, EventArgs e)
@@ -290,6 +305,11 @@ namespace Calculadora
                     operBox.Text = "";
                     operation = "sub";
                 }
+            }
+            else if (string.IsNullOrEmpty(operBox.Text) && val1 != 0)
+            {
+                resultBox.Text = Convert.ToString(val1) + "-";
+                operation = "sub";
             }
         }
 
