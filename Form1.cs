@@ -122,11 +122,14 @@ namespace Calculadora
 
         private void del_Click(object sender, EventArgs e)
         {
-            if (operBox.Text.Substring(operBox.Text.Length - 1) == ".")
+            if (!string.IsNullOrEmpty(operBox.Text))
             {
-                dotv = false;
+                if (operBox.Text.Substring(operBox.Text.Length - 1) == ".")
+                {
+                    dotv = false;
+                }
+                operBox.Text = operBox.Text.Substring(0, operBox.Text.Length - 1);
             }
-            operBox.Text = operBox.Text.Substring(0, operBox.Text.Length - 1);
         }
 
         private void cancelEntry_Click(object sender, EventArgs e)
