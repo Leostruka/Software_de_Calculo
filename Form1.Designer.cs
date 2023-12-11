@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.operBox = new System.Windows.Forms.TextBox();
             this.cancelEntry = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
@@ -66,7 +65,6 @@
             // 
             // cancelEntry
             // 
-            this.cancelEntry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelEntry.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelEntry.Location = new System.Drawing.Point(11, 119);
             this.cancelEntry.Name = "cancelEntry";
@@ -78,7 +76,6 @@
             // 
             // clear
             // 
-            this.clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clear.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear.Location = new System.Drawing.Point(106, 119);
             this.clear.Name = "clear";
@@ -90,7 +87,6 @@
             // 
             // div
             // 
-            this.div.Cursor = System.Windows.Forms.Cursors.Hand;
             this.div.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.div.Location = new System.Drawing.Point(203, 119);
             this.div.Name = "div";
@@ -102,7 +98,6 @@
             // 
             // mult
             // 
-            this.mult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mult.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mult.Location = new System.Drawing.Point(298, 119);
             this.mult.Name = "mult";
@@ -114,7 +109,6 @@
             // 
             // sub
             // 
-            this.sub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sub.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sub.Location = new System.Drawing.Point(298, 214);
             this.sub.Name = "sub";
@@ -126,7 +120,6 @@
             // 
             // nine
             // 
-            this.nine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nine.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nine.Location = new System.Drawing.Point(203, 214);
             this.nine.Name = "nine";
@@ -138,7 +131,6 @@
             // 
             // eight
             // 
-            this.eight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eight.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eight.Location = new System.Drawing.Point(106, 214);
             this.eight.Name = "eight";
@@ -150,7 +142,6 @@
             // 
             // seven
             // 
-            this.seven.Cursor = System.Windows.Forms.Cursors.Hand;
             this.seven.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seven.Location = new System.Drawing.Point(11, 214);
             this.seven.Name = "seven";
@@ -162,7 +153,6 @@
             // 
             // equal
             // 
-            this.equal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equal.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equal.Location = new System.Drawing.Point(298, 404);
             this.equal.Name = "equal";
@@ -174,7 +164,6 @@
             // 
             // three
             // 
-            this.three.Cursor = System.Windows.Forms.Cursors.Hand;
             this.three.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.three.Location = new System.Drawing.Point(203, 404);
             this.three.Name = "three";
@@ -186,7 +175,6 @@
             // 
             // two
             // 
-            this.two.Cursor = System.Windows.Forms.Cursors.Hand;
             this.two.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.two.Location = new System.Drawing.Point(106, 404);
             this.two.Name = "two";
@@ -198,7 +186,6 @@
             // 
             // one
             // 
-            this.one.Cursor = System.Windows.Forms.Cursors.Hand;
             this.one.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.one.Location = new System.Drawing.Point(11, 404);
             this.one.Name = "one";
@@ -210,7 +197,6 @@
             // 
             // dot
             // 
-            this.dot.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dot.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dot.Location = new System.Drawing.Point(205, 499);
             this.dot.Name = "dot";
@@ -222,7 +208,6 @@
             // 
             // zero
             // 
-            this.zero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.zero.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zero.Location = new System.Drawing.Point(11, 499);
             this.zero.Name = "zero";
@@ -234,7 +219,6 @@
             // 
             // four
             // 
-            this.four.Cursor = System.Windows.Forms.Cursors.Hand;
             this.four.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.four.Location = new System.Drawing.Point(11, 309);
             this.four.Name = "four";
@@ -246,7 +230,6 @@
             // 
             // five
             // 
-            this.five.Cursor = System.Windows.Forms.Cursors.Hand;
             this.five.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.five.Location = new System.Drawing.Point(106, 309);
             this.five.Name = "five";
@@ -258,7 +241,6 @@
             // 
             // six
             // 
-            this.six.Cursor = System.Windows.Forms.Cursors.Hand;
             this.six.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.six.Location = new System.Drawing.Point(203, 309);
             this.six.Name = "six";
@@ -270,7 +252,6 @@
             // 
             // som
             // 
-            this.som.Cursor = System.Windows.Forms.Cursors.Hand;
             this.som.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.som.Location = new System.Drawing.Point(298, 309);
             this.som.Name = "som";
@@ -295,7 +276,6 @@
             // 
             // del
             // 
-            this.del.Cursor = System.Windows.Forms.Cursors.Hand;
             this.del.Location = new System.Drawing.Point(342, 74);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(44, 31);
@@ -308,7 +288,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(402, 599);
             this.Controls.Add(this.del);
             this.Controls.Add(this.resultBox);
@@ -331,14 +310,9 @@
             this.Controls.Add(this.clear);
             this.Controls.Add(this.cancelEntry);
             this.Controls.Add(this.operBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MaximizeBox = false;
             this.Name = "Form1";
             this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Calculator";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
