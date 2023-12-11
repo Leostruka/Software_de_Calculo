@@ -17,6 +17,7 @@ namespace Calculadora
         decimal val1 = 0, val2 = 0, result = 0;
         string operation = "";
         bool dotv = false;
+        private bool numericButtonsEnabled = true;
 
         // Alternate font size
         private void size18()
@@ -52,6 +53,40 @@ namespace Calculadora
         private bool IsRoundNumber(decimal number)
         {
             return Math.Round(number, 0) == number;
+        }
+
+        // Disable Numeric Buttons if equal is activate
+        private void DisableNumericButtons()
+        {
+            zero.Enabled = false;
+            one.Enabled = false;
+            two.Enabled = false;
+            three.Enabled = false;
+            four.Enabled = false;
+            five.Enabled = false;
+            six.Enabled = false;
+            seven.Enabled = false;
+            eight.Enabled = false;
+            nine.Enabled = false;
+            dot.Enabled = false;
+            cancelEntry.Enabled = false;
+        }
+
+        // Enable if operator or clar button is pressed
+        private void EnableNumericButtons()
+        {
+            zero.Enabled = true;
+            one.Enabled = true;
+            two.Enabled = true;
+            three.Enabled = true;
+            four.Enabled = true;
+            five.Enabled = true;
+            six.Enabled = true;
+            seven.Enabled = true;
+            eight.Enabled = true;
+            nine.Enabled = true;
+            dot.Enabled = true;
+            cancelEntry.Enabled = true;
         }
 
         // Start form
@@ -143,6 +178,7 @@ namespace Calculadora
             result = 0; val1 = 0; val2 = 0;
             operBox.Text = ""; resultBox.Text = "";
             dotv = false;
+            EnableNumericButtons();
         }
 
         private void mult_Click(object sender, EventArgs e)
@@ -150,6 +186,7 @@ namespace Calculadora
             if (operBox.Text != "" || result != 0)
             {
                 dotv = false;
+                EnableNumericButtons();
 
                 if (resultBox.Text == "")
                 {
@@ -192,6 +229,7 @@ namespace Calculadora
             if (operBox.Text != "" || result != 0)
             {
                 dotv = false;
+                EnableNumericButtons();
 
                 if (resultBox.Text == "")
                 {
@@ -234,6 +272,7 @@ namespace Calculadora
             if (operBox.Text != "" || result != 0)
             {
                 dotv = false;
+                EnableNumericButtons();
 
                 if (resultBox.Text == "")
                 {
@@ -276,6 +315,7 @@ namespace Calculadora
             if (operBox.Text != "" || result != 0)
             {
                 dotv = false;
+                EnableNumericButtons();
 
                 if (resultBox.Text == "")
                 {
@@ -317,7 +357,8 @@ namespace Calculadora
         {
             if (val1 != 0 && val2 != 0 || val1 != 0 && operBox.Text != "")
             {
-                dotv = false;
+                dotv = true;
+                DisableNumericButtons();
 
                 if (operation == "mult")
                 {

@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,8 @@
         #region Código gerado pelo Windows Form Designer
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -56,7 +56,7 @@
             // 
             this.operBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.operBox.Enabled = false;
-            this.operBox.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.operBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.operBox.Location = new System.Drawing.Point(11, 69);
             this.operBox.Name = "operBox";
@@ -284,7 +284,7 @@
             // 
             this.resultBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.resultBox.Enabled = false;
-            this.resultBox.Font = new System.Drawing.Font("Courier New", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultBox.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold);
             this.resultBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.resultBox.Location = new System.Drawing.Point(11, 12);
             this.resultBox.Multiline = true;
@@ -333,7 +333,6 @@
             this.Controls.Add(this.operBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.RightToLeftLayout = true;
