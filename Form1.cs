@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Calculadora
 {
@@ -17,7 +16,6 @@ namespace Calculadora
         decimal val1 = 0, val2 = 0, result = 0;
         string operation = "";
         bool dotv = false;
-        private bool numericButtonsEnabled = true;
 
         // Alternate font size
         private void size18()
@@ -267,7 +265,7 @@ namespace Calculadora
             }
         }
 
-        private void som_Click(object sender, EventArgs e)
+        private void sum_Click(object sender, EventArgs e)
         {
             if (operBox.Text != "" || result != 0)
             {

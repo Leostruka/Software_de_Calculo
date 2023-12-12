@@ -47,7 +47,7 @@
             this.four = new System.Windows.Forms.Button();
             this.five = new System.Windows.Forms.Button();
             this.six = new System.Windows.Forms.Button();
-            this.som = new System.Windows.Forms.Button();
+            this.sum = new System.Windows.Forms.Button();
             this.resultBox = new System.Windows.Forms.TextBox();
             this.del = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -268,17 +268,17 @@
             this.six.UseVisualStyleBackColor = true;
             this.six.Click += new System.EventHandler(this.six_Click);
             // 
-            // som
+            // sum
             // 
-            this.som.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.som.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.som.Location = new System.Drawing.Point(298, 309);
-            this.som.Name = "som";
-            this.som.Size = new System.Drawing.Size(89, 89);
-            this.som.TabIndex = 12;
-            this.som.Text = "+";
-            this.som.UseVisualStyleBackColor = true;
-            this.som.Click += new System.EventHandler(this.som_Click);
+            this.sum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sum.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sum.Location = new System.Drawing.Point(298, 309);
+            this.sum.Name = "sum";
+            this.sum.Size = new System.Drawing.Size(89, 89);
+            this.sum.TabIndex = 12;
+            this.sum.Text = "+";
+            this.sum.UseVisualStyleBackColor = true;
+            this.sum.Click += new System.EventHandler(this.sum_Click);
             // 
             // resultBox
             // 
@@ -318,7 +318,7 @@
             this.Controls.Add(this.three);
             this.Controls.Add(this.two);
             this.Controls.Add(this.one);
-            this.Controls.Add(this.som);
+            this.Controls.Add(this.sum);
             this.Controls.Add(this.six);
             this.Controls.Add(this.five);
             this.Controls.Add(this.four);
@@ -361,7 +361,7 @@
         private System.Windows.Forms.Button four;
         private System.Windows.Forms.Button five;
         private System.Windows.Forms.Button six;
-        private System.Windows.Forms.Button som;
+        private System.Windows.Forms.Button sum;
         private System.Windows.Forms.TextBox operBox;
         private System.Windows.Forms.TextBox resultBox;
         private System.Windows.Forms.Button del;
